@@ -160,7 +160,7 @@ class StorageService {
   }
 
   String getSelectedFont() {
-    return getSetting<String>('selected_font', defaultValue: 'Tahoma') ?? 'Tahoma';
+    return getSetting<String>('selected_font', defaultValue: 'IranSans') ?? 'IranSans';
   }
 
   Future<void> setSelectedFont(String font) async {

@@ -1,0 +1,78 @@
+name: Deploy Flutter Web to GitHub Pages
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.24.0'
+        channel: 'stable'
+        cache: true
+        
+    - name: Install dependencies
+      run: flutter pub get
+      
+    - name: Generate localization files
+      run: flutter gen-l10n
+      
+    - name: Build JSON annotations
+      run: flutter packages pub run build_runner build --delete-conflicting-outputs
+      
+    - name: Build web
+      run: flutter build web --release --web-renderer html --base-href /Chakame/
+      
+    - name: Copy privacy policy to build
+      run: |
+        cp web/privacy-policy.html build/web/
+        # Create privacy-policy directory for clean URL access
+        mkdir -p build/web/privacy-policy
+        cp web/privacy-policy.html build/web/privacy-policy/index.html
+        # Copy .htaccess for URL rewriting (if using Apache)
+        cp web/.htaccess build/web/ 2>/dev/null || true
+        # Copy Jekyll config for GitHub Pages
+        cp web/_config.yml build/web/ 2>/dev/null || true
+        # Create a 404.html that redirects to index.html for SPA routing
+        echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/Chakame/"></head><body></body></html>' > build/web/404.html
+      
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+      
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: './build/web'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:animations/animations.dart';
-import '../l10n/app_localizations.dart';
+import 'package:chakame/l10n/l10n.dart';
 import '../models/favorite_model.dart';
 import '../models/poem_model.dart';
 import '../providers/favorites_provider.dart';
 import '../providers/settings_provider.dart';
 import '../utils/constants.dart';
-import '../widgets/poem_card.dart';
 import 'poem_detail_screen.dart';
 
 class FavoritesScreen extends ConsumerStatefulWidget {

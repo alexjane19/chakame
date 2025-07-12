@@ -1,0 +1,11 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Redirect /privacy-policy to privacy-policy.html
+RewriteRule ^privacy-policy/?$ privacy-policy.html [L]
+
+# Handle Flutter web routing - redirect all non-existing files to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/privacy-policy
+RewriteRule . index.html [L]

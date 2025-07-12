@@ -565,5 +565,73 @@
   "searchHint": "Search...",
   "@searchHint": {
     "description": "Search field hint text"
+  },
+  "privacyPolicy": "Privacy Policy",
+  "@privacyPolicy": {
+    "description": "Privacy policy menu item"
+  },
+  "privacyPolicySubtitle": "How we handle your data",
+  "@privacyPolicySubtitle": {
+    "description": "Privacy policy subtitle"
+  },
+  "privacyPolicyTitle": "Privacy Policy",
+  "@privacyPolicyTitle": {
+    "description": "Privacy policy page title"
+  },
+  "privacyPolicyIntro": "This privacy policy explains how Chakame handles your personal information and data when you use our application.",
+  "@privacyPolicyIntro": {
+    "description": "Privacy policy introduction"
+  },
+  "dataCollectionTitle": "Data Collection",
+  "@dataCollectionTitle": {
+    "description": "Data collection section title"
+  },
+  "dataCollectionContent": "Chakame collects minimal data to provide its services:\n\n• Your favorite poems (stored locally on your device)\n• App settings and preferences (stored locally)\n• Notification preferences\n\nWe do not collect personal information such as your name, email, or location.",
+  "@dataCollectionContent": {
+    "description": "Data collection section content"
+  },
+  "dataUsageTitle": "How We Use Your Data",
+  "@dataUsageTitle": {
+    "description": "Data usage section title"
+  },
+  "dataUsageContent": "Your data is used exclusively to:\n\n• Provide personalized poetry recommendations\n• Save your favorite poems for easy access\n• Remember your app preferences\n• Send daily poem notifications if enabled\n\nAll data remains on your device and is never transmitted to external servers.",
+  "@dataUsageContent": {
+    "description": "Data usage section content"
+  },
+  "dataSharingTitle": "Data Sharing",
+  "@dataSharingTitle": {
+    "description": "Data sharing section title"
+  },
+  "dataSharingContent": "We do not share, sell, or transmit your personal data to third parties. The app connects to the Ganjoor API only to fetch poems, but no personal information is sent with these requests.",
+  "@dataSharingContent": {
+    "description": "Data sharing section content"
+  },
+  "dataStorageTitle": "Data Storage",
+  "@dataStorageTitle": {
+    "description": "Data storage section title"
+  },
+  "dataStorageContent": "All your data is stored locally on your device:\n\n• Favorites are saved in local storage\n• Settings are stored in app preferences\n• No cloud storage or external databases are used\n\nYou can delete all data by clearing the app's cache or uninstalling the application.",
+  "@dataStorageContent": {
+    "description": "Data storage section content"
+  },
+  "userRightsTitle": "Your Rights",
+  "@userRightsTitle": {
+    "description": "User rights section title"
+  },
+  "userRightsContent": "You have full control over your data:\n\n• View all stored data in the app settings\n• Delete specific favorites or clear all data\n• Export your favorites for backup\n• Disable notifications at any time\n\nSince all data is stored locally, you have complete ownership and control.",
+  "@userRightsContent": {
+    "description": "User rights section content"
+  },
+  "contactTitle": "Contact Us",
+  "@contactTitle": {
+    "description": "Contact section title"
+  },
+  "contactContent": "If you have questions about this privacy policy or how your data is handled, please contact us through the app's support channels or visit our website.",
+  "@contactContent": {
+    "description": "Contact section content"
+  },
+  "lastUpdated": "Last updated: January 2025",
+  "@lastUpdated": {
+    "description": "Last updated date"
   }
 }

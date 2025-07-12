@@ -49,7 +49,7 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
     darkMode: false,
     notificationsEnabled: true,
     notificationTime: '09:00',
-    selectedFont: 'Tahoma',
+    selectedFont: 'IranSans',
     selectedLanguage: 'fa',
     isLoading: false,
   )) {
@@ -204,7 +204,7 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
       darkMode: false,
       notificationsEnabled: true,
       notificationTime: '09:00',
-      selectedFont: 'Tahoma',
+      selectedFont: 'IranSans',
       selectedLanguage: 'fa',
       isLoading: false,
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../l10n/app_localizations.dart';
+import 'package:chakame/l10n/l10n.dart';
 import '../models/poet_model.dart';
 import '../providers/poem_provider.dart';
 import '../utils/constants.dart';
@@ -174,7 +174,7 @@ class _PoetCardState extends ConsumerState<PoetCard> with SingleTickerProviderSt
       child: ClipOval(
         child: widget.poet.imageUrl != null
             ? CachedNetworkImage(
-                imageUrl: widget.poet.imageUrl!,
+                imageUrl: '${AppConstants.apiBaseUrl}${widget.poet.imageUrl!}',
                 fit: BoxFit.cover,
                 placeholder: (context, url) => _buildAvatarPlaceholder(theme, size),
                 errorWidget: (context, url, error) => _buildAvatarPlaceholder(theme, size),

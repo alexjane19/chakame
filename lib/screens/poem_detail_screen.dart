@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../l10n/app_localizations.dart';
+import 'package:chakame/l10n/l10n.dart';
 import '../models/poem_model.dart';
 import '../providers/favorites_provider.dart';
 import '../providers/settings_provider.dart';
@@ -142,53 +142,41 @@ class _PoemDetailScreenState extends ConsumerState<PoemDetailScreen>
       ],
       flexibleSpace: FlexibleSpaceBar(
         background: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                theme.primaryColor,
-                theme.primaryColor.withOpacity(0.8),
-                theme.colorScheme.secondary,
-              ],
-            ),
+          color: theme.primaryColor,
+          padding: const EdgeInsets.only(
+            left: AppDimensions.paddingLarge,
+            right: AppDimensions.paddingLarge,
+            bottom: AppDimensions.paddingLarge,
           ),
-          child: Container(
-            padding: const EdgeInsets.only(
-              left: AppDimensions.paddingLarge,
-              right: AppDimensions.paddingLarge,
-              bottom: AppDimensions.paddingLarge,
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  widget.poem.title,
-                  style: theme.textTheme.headlineMedium?.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                widget.poem.title,
+                style: theme.textTheme.headlineMedium?.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
                 ),
-                const SizedBox(height: AppDimensions.marginSmall),
-                Text(
-                  widget.poem.poetName,
-                  style: theme.textTheme.titleLarge?.copyWith(
-                    color: Colors.white70,
-                    fontWeight: FontWeight.w600,
-                  ),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+              const SizedBox(height: AppDimensions.marginSmall),
+              Text(
+                widget.poem.poetName,
+                style: theme.textTheme.titleLarge?.copyWith(
+                  color: Colors.white70,
+                  fontWeight: FontWeight.w600,
                 ),
-                const SizedBox(height: AppDimensions.marginSmall),
-                Text(
-                  widget.poem.categoryName,
-                  style: theme.textTheme.bodyMedium?.copyWith(
-                    color: Colors.white60,
-                  ),
+              ),
+              const SizedBox(height: AppDimensions.marginSmall),
+              Text(
+                widget.poem.categoryName,
+                style: theme.textTheme.bodyMedium?.copyWith(
+                  color: Colors.white60,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
@@ -216,7 +204,6 @@ class _PoemDetailScreenState extends ConsumerState<PoemDetailScreen>
 
   Widget _buildPoemText(BuildContext context, ThemeData theme) {
     final settingsState = ref.watch(settingsProvider);
-    final verses = widget.poem.verses;
 
     return Card(
       elevation: AppDimensions.elevationMedium,
@@ -237,27 +224,18 @@ class _PoemDetailScreenState extends ConsumerState<PoemDetailScreen>
               ),
             ),
             const SizedBox(height: AppDimensions.marginLarge),
-            ...verses.asMap().entries.map((entry) {
-              final index = entry.key;
-              final verse = entry.value;
-              
-              return AnimatedContainer(
-                duration: AppAnimations.shortDuration,
-                margin: const EdgeInsets.only(bottom: AppDimensions.marginMedium),
-                child: Text(
-                  verse,
-                  style: TextStyle(
-                    fontSize: 18,
-                    height: 2.0,
-                    color: theme.textTheme.bodyLarge?.color,
-                    fontFamily: settingsState.selectedFont,
-                    fontWeight: FontWeight.w400,
-                  ),
-                  textAlign: TextAlign.justify,
-                  textDirection: TextDirection.rtl,
-                ),
-              );
-            }),
+            Text(
+              widget.poem.plainText,
+              style: TextStyle(
+                fontSize: 18,
+                height: 2.0,
+                color: theme.textTheme.bodyLarge?.color,
+                fontFamily: settingsState.selectedFont,
+                fontWeight: FontWeight.w400,
+              ),
+              textAlign: TextAlign.justify,
+              textDirection: TextDirection.rtl,
+            ),
           ],
         ),
       ),
@@ -573,6 +551,8 @@ ${AppConstants.ganjoorUrl}${widget.poem.poemUrl}
 
   void _openInGanjoor(BuildContext context) async {
     final url = AppConstants.ganjoorUrl + widget.poem.poemUrl;
+    final localizations = AppLocalizations.of(context)!;
+    final messenger = ScaffoldMessenger.of(context);
     
     try {
       final uri = Uri.parse(url);
@@ -583,33 +563,26 @@ ${AppConstants.ganjoorUrl}${widget.poem.poemUrl}
         );
       } else {
         // Fallback: copy to clipboard and show message
-        Clipboard.setData(ClipboardData(text: url));
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(AppLocalizations.of(context)!.link(url)),
-            action: SnackBarAction(
-              label: AppLocalizations.of(context)!.copy,
-              onPressed: () {
-                Clipboard.setData(ClipboardData(text: url));
-              },
-            ),
-          ),
-        );
+        _showUrlFallback(url, localizations, messenger);
       }
     } catch (e) {
       // Error handling: copy to clipboard and show message
-      Clipboard.setData(ClipboardData(text: url));
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(AppLocalizations.of(context)!.link(url)),
-          action: SnackBarAction(
-            label: AppLocalizations.of(context)!.copy,
-            onPressed: () {
-              Clipboard.setData(ClipboardData(text: url));
-            },
-          ),
-        ),
-      );
+      _showUrlFallback(url, localizations, messenger);
     }
+  }
+  
+  void _showUrlFallback(String url, AppLocalizations localizations, ScaffoldMessengerState messenger) {
+    Clipboard.setData(ClipboardData(text: url));
+    messenger.showSnackBar(
+      SnackBar(
+        content: Text(localizations.link(url)),
+        action: SnackBarAction(
+          label: localizations.copy,
+          onPressed: () {
+            Clipboard.setData(ClipboardData(text: url));
+          },
+        ),
+      ),
+    );
   }
 }

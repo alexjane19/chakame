@@ -443,8 +443,8 @@ description: Beautiful Persian poetry app with daily notifications
 
 **Flatpak (Linux):**
 ```yaml
-# com.example.chakame.yaml
-app-id: com.example.chakame
+# com.cilix.chakame.yaml
+app-id: com.cilix.chakame
 runtime: org.freedesktop.Platform
 runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
@@ -508,3 +508,12 @@ flutter run -d macos           # macOS
 flutter run -d linux           # Linux
 flutter run                    # Mobile (default device)
 ```
+
+# Run the AppImage
+./Chakame-x86_64.AppImage
+
+# Extract contents (if needed)
+./Chakame-x86_64.AppImage --appimage-extract
+
+# Create portable home directory
+./Chakame-x86_64.AppImage --appimage-portable-home

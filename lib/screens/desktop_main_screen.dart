@@ -1,4 +1,4 @@
-import 'package:chakame/l10n/app_localizations.dart';
+import 'package:chakame/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../l10n/app_localizations.dart';
+import 'package:chakame/l10n/l10n.dart';
 import '../providers/poem_provider.dart';
 import '../utils/constants.dart';
 

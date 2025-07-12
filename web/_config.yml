@@ -1,0 +1,8 @@
+# GitHub Pages configuration
+plugins:
+  - jekyll-redirect-from
+
+# Custom redirects for GitHub Pages
+redirect_from:
+  - /privacy-policy/
+  - /privacy-policy.html

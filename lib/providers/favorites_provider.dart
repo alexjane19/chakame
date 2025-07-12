@@ -58,19 +58,6 @@ class FavoritesState {
   bool isSearchEmpty() {
     return searchQuery.isNotEmpty && filteredFavorites.isEmpty;
   }
-
-  String getSortTypeDisplayName() {
-    switch (sortType) {
-      case FavoritesSortType.dateNewest:
-        return 'جدیدترین';
-      case FavoritesSortType.dateOldest:
-        return 'قدیمی‌ترین';
-      case FavoritesSortType.poetName:
-        return 'نام شاعر';
-      case FavoritesSortType.poemTitle:
-        return 'عنوان شعر';
-    }
-  }
 }
 
 // Favorites StateNotifier

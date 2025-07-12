@@ -565,5 +565,73 @@
   "searchHint": "جستجو کنید...",
   "@searchHint": {
     "description": "Search field hint text"
+  },
+  "privacyPolicy": "حریم خصوصی",
+  "@privacyPolicy": {
+    "description": "Privacy policy menu item"
+  },
+  "privacyPolicySubtitle": "نحوه مدیریت اطلاعات شما",
+  "@privacyPolicySubtitle": {
+    "description": "Privacy policy subtitle"
+  },
+  "privacyPolicyTitle": "سیاست حریم خصوصی",
+  "@privacyPolicyTitle": {
+    "description": "Privacy policy page title"
+  },
+  "privacyPolicyIntro": "این سیاست حریم خصوصی نحوه مدیریت اطلاعات شخصی و داده‌های شما توسط چکامه را هنگام استفاده از برنامه توضیح می‌دهد.",
+  "@privacyPolicyIntro": {
+    "description": "Privacy policy introduction"
+  },
+  "dataCollectionTitle": "جمع‌آوری داده‌ها",
+  "@dataCollectionTitle": {
+    "description": "Data collection section title"
+  },
+  "dataCollectionContent": "چکامه حداقل داده‌ها را برای ارائه خدمات خود جمع‌آوری می‌کند:\n\n• اشعار مورد علاقه شما (به صورت محلی در دستگاه ذخیره می‌شود)\n• تنظیمات و ترجیحات برنامه (به صورت محلی ذخیره می‌شود)\n• ترجیحات اعلان‌ها\n\nما اطلاعات شخصی مانند نام، ایمیل یا موقعیت مکانی شما را جمع‌آوری نمی‌کنیم.",
+  "@dataCollectionContent": {
+    "description": "Data collection section content"
+  },
+  "dataUsageTitle": "نحوه استفاده از داده‌های شما",
+  "@dataUsageTitle": {
+    "description": "Data usage section title"
+  },
+  "dataUsageContent": "داده‌های شما منحصراً برای موارد زیر استفاده می‌شود:\n\n• ارائه پیشنهادات شعری شخصی‌سازی شده\n• ذخیره اشعار مورد علاقه برای دسترسی آسان\n• به خاطرسپاری ترجیحات برنامه\n• ارسال اعلان‌های روزانه شعر در صورت فعال بودن\n\nتمام داده‌ها در دستگاه شما باقی می‌ماند و هرگز به سرورهای خارجی ارسال نمی‌شود.",
+  "@dataUsageContent": {
+    "description": "Data usage section content"
+  },
+  "dataSharingTitle": "اشتراک‌گذاری داده‌ها",
+  "@dataSharingTitle": {
+    "description": "Data sharing section title"
+  },
+  "dataSharingContent": "ما داده‌های شخصی شما را با اشخاص ثالث به اشتراک نمی‌گذاریم، نمی‌فروشیم یا منتقل نمی‌کنیم. برنامه تنها برای دریافت اشعار به API گنجور متصل می‌شود، اما هیچ اطلاعات شخصی با این درخواست‌ها ارسال نمی‌شود.",
+  "@dataSharingContent": {
+    "description": "Data sharing section content"
+  },
+  "dataStorageTitle": "ذخیره‌سازی داده‌ها",
+  "@dataStorageTitle": {
+    "description": "Data storage section title"
+  },
+  "dataStorageContent": "تمام داده‌های شما به صورت محلی در دستگاه ذخیره می‌شود:\n\n• علاقه‌مندی‌ها در حافظه محلی ذخیره می‌شوند\n• تنظیمات در ترجیحات برنامه ذخیره می‌شوند\n• از ذخیره‌سازی ابری یا پایگاه‌های داده خارجی استفاده نمی‌شود\n\nمی‌توانید با پاک کردن حافظه موقت برنامه یا حذف برنامه، تمام داده‌ها را پاک کنید.",
+  "@dataStorageContent": {
+    "description": "Data storage section content"
+  },
+  "userRightsTitle": "حقوق شما",
+  "@userRightsTitle": {
+    "description": "User rights section title"
+  },
+  "userRightsContent": "شما کنترل کاملی بر داده‌های خود دارید:\n\n• مشاهده تمام داده‌های ذخیره شده در تنظیمات برنامه\n• حذف علاقه‌مندی‌های خاص یا پاک کردن تمام داده‌ها\n• صادر کردن علاقه‌مندی‌ها برای پشتیبان‌گیری\n• غیرفعال کردن اعلان‌ها در هر زمان\n\nازآنجایی که تمام داده‌ها به صورت محلی ذخیره می‌شوند، شما مالکیت و کنترل کاملی دارید.",
+  "@userRightsContent": {
+    "description": "User rights section content"
+  },
+  "contactTitle": "تماس با ما",
+  "@contactTitle": {
+    "description": "Contact section title"
+  },
+  "contactContent": "اگر سؤالی درباره این سیاست حریم خصوصی یا نحوه مدیریت داده‌های شما دارید، لطفاً از طریق کانال‌های پشتیبانی برنامه با ما تماس بگیرید یا از وب‌سایت ما دیدن کنید.",
+  "@contactContent": {
+    "description": "Contact section content"
+  },
+  "lastUpdated": "آخرین به‌روزرسانی: ژانویه ۲۰۲۵",
+  "@lastUpdated": {
+    "description": "Last updated date"
   }
 }

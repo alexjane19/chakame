@@ -3,11 +3,9 @@ import 'package:flutter/services.dart';
 import 'dart:ui' as ui;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:timezone/data/latest.dart' as tz;
-import 'package:intl/intl.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'l10n/app_localizations.dart';
+import 'package:chakame/l10n/l10n.dart';
 
-import 'providers/poem_provider.dart';
 import 'providers/favorites_provider.dart';
 import 'providers/settings_provider.dart';
 import 'services/storage_service.dart';
@@ -18,6 +16,7 @@ import 'screens/main_screen.dart';
 import 'screens/desktop_main_screen.dart';
 import 'screens/favorites_screen.dart';
 import 'screens/settings_screen.dart';
+import 'screens/privacy_policy_screen.dart';
 import 'utils/constants.dart';
 
 void main() async {
@@ -35,6 +34,9 @@ Future<void> _initializeApp() async {
     await StorageService.init();
     
     await NotificationService.instance.init();
+    
+    // Request notification permissions
+    await NotificationService.instance.requestPermissions();
     
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
@@ -93,6 +95,7 @@ class ChakameApp extends StatelessWidget {
           routes: {
             '/favorites': (context) => const FavoritesScreen(),
             '/settings': (context) => const SettingsScreen(),
+            '/privacy': (context) => const PrivacyPolicyScreen(),
           },
         );
       },

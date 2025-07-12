@@ -1,5 +1,6 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
-import 'package:universal_io/io.dart';
 
 class PlatformService {
   static PlatformService? _instance;

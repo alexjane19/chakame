@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:math';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
@@ -121,15 +122,35 @@ class NotificationService {
     // Schedule new notification
     final scheduledDate = _nextInstanceOfTime(time);
     
-    await _flutterLocalNotificationsPlugin.zonedSchedule(
-      dailyNotificationId,
-      title ?? 'Daily Poem',
-      body ?? 'A beautiful poem is ready for you',
-      scheduledDate,
-      _getNotificationDetails(),
-      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
-      matchDateTimeComponents: DateTimeComponents.time,
-    );
+    try {
+      await _flutterLocalNotificationsPlugin.zonedSchedule(
+        dailyNotificationId,
+        title ?? 'Daily Poem',
+        body ?? 'A beautiful poem is ready for you',
+        scheduledDate,
+        _getNotificationDetails(),
+        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+        matchDateTimeComponents: DateTimeComponents.time,
+      );
+    } catch (e) {
+      // Fallback to inexact scheduling if exact alarms are not permitted
+      debugPrint('Exact alarm scheduling failed, falling back to inexact: $e');
+      try {
+        await _flutterLocalNotificationsPlugin.zonedSchedule(
+          dailyNotificationId,
+          title ?? 'Daily Poem',
+          body ?? 'A beautiful poem is ready for you',
+          scheduledDate,
+          _getNotificationDetails(),
+          androidScheduleMode: AndroidScheduleMode.alarmClock,
+          matchDateTimeComponents: DateTimeComponents.time,
+        );
+      } catch (fallbackError) {
+        debugPrint('Fallback alarm scheduling also failed: $fallbackError');
+        // Final fallback - show immediate notification as test
+        await showDailyPoemNotification(title: title, body: body);
+      }
+    }
 
     // Save notification time
     await storage.setNotificationTime('${time.hour.toString().padLeft(2, '0')}:${time.minute.toString().padLeft(2, '0')}');

@@ -29,7 +29,7 @@ class ApiService {
   Future<List<Poet>> getAllPoets() async {
     try {
       if (!await hasInternetConnection()) {
-        throw ApiException('اتصال به اینترنت برقرار نیست', ApiErrorType.noConnection);
+        throw ApiException('No internet connection', ApiErrorType.noConnection);
       }
 
       final response = await _client
@@ -40,43 +40,43 @@ class ApiService {
         final List<dynamic> jsonData = json.decode(response.body);
         return jsonData.map((json) => Poet.fromJson(json)).toList();
       } else {
-        throw ApiException('خطا در دریافت شاعران', ApiErrorType.serverError);
+        throw ApiException('Error fetching poets', ApiErrorType.serverError);
       }
     } on SocketException {
-      throw ApiException('اتصال به اینترنت برقرار نیست', ApiErrorType.noConnection);
+      throw ApiException('No internet connection', ApiErrorType.noConnection);
     } on http.ClientException {
-      throw ApiException('خطا در اتصال به سرور', ApiErrorType.networkError);
+      throw ApiException('Server connection error', ApiErrorType.networkError);
     } catch (e) {
       if (e is ApiException) rethrow;
-      throw ApiException('خطای غیرمنتظره', ApiErrorType.unknown);
+      throw ApiException('Unexpected error', ApiErrorType.unknown);
     }
   }
 
   Future<Poem> getRandomPoem() async {
     try {
       if (!await hasInternetConnection()) {
-        throw ApiException('اتصال به اینترنت برقرار نیست', ApiErrorType.noConnection);
+        throw ApiException('No internet connection', ApiErrorType.noConnection);
       }
 
       final poets = await getAllPoets();
       final publishedPoets = poets.where((poet) => poet.published).toList();
 
       if (publishedPoets.isEmpty) {
-        throw ApiException('شاعری یافت نشد', ApiErrorType.noData);
+        throw ApiException('No poets found', ApiErrorType.noData);
       }
 
       final randomPoet = publishedPoets[_random.nextInt(publishedPoets.length)];
       return await getRandomPoemFromPoet(randomPoet.id);
     } catch (e) {
       if (e is ApiException) rethrow;
-      throw ApiException('خطا در دریافت شعر تصادفی', ApiErrorType.unknown);
+      throw ApiException('Error fetching random poem', ApiErrorType.unknown);
     }
   }
 
   Future<Poem> getRandomPoemFromPoet(int poetId) async {
     try {
       if (!await hasInternetConnection()) {
-        throw ApiException('اتصال به اینترنت برقرار نیست', ApiErrorType.noConnection);
+        throw ApiException('No internet connection', ApiErrorType.noConnection);
       }
 
       final response = await _client
@@ -88,24 +88,24 @@ class ApiService {
         final ganjoorResponse = GanjoorPoemResponse.fromJson(jsonData);
         return ganjoorResponse.toPoem();
       } else if (response.statusCode == 404) {
-        throw ApiException('شعری برای این شاعر یافت نشد', ApiErrorType.notFound);
+        throw ApiException('No poem found for this poet', ApiErrorType.notFound);
       } else {
-        throw ApiException('خطا در دریافت شعر', ApiErrorType.serverError);
+        throw ApiException('Error fetching poem', ApiErrorType.serverError);
       }
     } on SocketException {
-      throw ApiException('اتصال به اینترنت برقرار نیست', ApiErrorType.noConnection);
+      throw ApiException('No internet connection', ApiErrorType.noConnection);
     } on http.ClientException {
-      throw ApiException('خطا در اتصال به سرور', ApiErrorType.networkError);
+      throw ApiException('Server connection error', ApiErrorType.networkError);
     } catch (e) {
       if (e is ApiException) rethrow;
-      throw ApiException('خطای غیرمنتظره', ApiErrorType.unknown);
+      throw ApiException('Unexpected error', ApiErrorType.unknown);
     }
   }
 
   Future<List<Poem>> getPoemsByPoet(int poetId, {int page = 1, int pageSize = 20}) async {
     try {
       if (!await hasInternetConnection()) {
-        throw ApiException('اتصال به اینترنت برقرار نیست', ApiErrorType.noConnection);
+        throw ApiException('No internet connection', ApiErrorType.noConnection);
       }
 
       final response = await _client
@@ -116,22 +116,22 @@ class ApiService {
         final List<dynamic> jsonData = json.decode(response.body);
         return jsonData.map((json) => Poem.fromJson(json)).toList();
       } else {
-        throw ApiException('خطا در دریافت اشعار', ApiErrorType.serverError);
+        throw ApiException('Error fetching poems', ApiErrorType.serverError);
       }
     } on SocketException {
-      throw ApiException('اتصال به اینترنت برقرار نیست', ApiErrorType.noConnection);
+      throw ApiException('No internet connection', ApiErrorType.noConnection);
     } on http.ClientException {
-      throw ApiException('خطا در اتصال به سرور', ApiErrorType.networkError);
+      throw ApiException('Server connection error', ApiErrorType.networkError);
     } catch (e) {
       if (e is ApiException) rethrow;
-      throw ApiException('خطای غیرمنتظره', ApiErrorType.unknown);
+      throw ApiException('Unexpected error', ApiErrorType.unknown);
     }
   }
 
   Future<Poem> getPoemById(int poemId) async {
     try {
       if (!await hasInternetConnection()) {
-        throw ApiException('اتصال به اینترنت برقرار نیست', ApiErrorType.noConnection);
+        throw ApiException('No internet connection', ApiErrorType.noConnection);
       }
 
       final response = await _client
@@ -143,24 +143,24 @@ class ApiService {
         final ganjoorResponse = GanjoorPoemResponse.fromJson(jsonData);
         return ganjoorResponse.toPoem();
       } else if (response.statusCode == 404) {
-        throw ApiException('شعر یافت نشد', ApiErrorType.notFound);
+        throw ApiException('Poem not found', ApiErrorType.notFound);
       } else {
-        throw ApiException('خطا در دریافت شعر', ApiErrorType.serverError);
+        throw ApiException('Error fetching poem', ApiErrorType.serverError);
       }
     } on SocketException {
-      throw ApiException('اتصال به اینترنت برقرار نیست', ApiErrorType.noConnection);
+      throw ApiException('No internet connection', ApiErrorType.noConnection);
     } on http.ClientException {
-      throw ApiException('خطا در اتصال به سرور', ApiErrorType.networkError);
+      throw ApiException('Server connection error', ApiErrorType.networkError);
     } catch (e) {
       if (e is ApiException) rethrow;
-      throw ApiException('خطای غیرمنتظره', ApiErrorType.unknown);
+      throw ApiException('Unexpected error', ApiErrorType.unknown);
     }
   }
 
   Future<List<Poem>> searchPoems(String query, {int page = 1, int pageSize = 20}) async {
     try {
       if (!await hasInternetConnection()) {
-        throw ApiException('اتصال به اینترنت برقرار نیست', ApiErrorType.noConnection);
+        throw ApiException('No internet connection', ApiErrorType.noConnection);
       }
 
       final encodedQuery = Uri.encodeComponent(query);
@@ -172,22 +172,22 @@ class ApiService {
         final List<dynamic> jsonData = json.decode(response.body);
         return jsonData.map((json) => Poem.fromJson(json)).toList();
       } else {
-        throw ApiException('خطا در جستجوی اشعار', ApiErrorType.serverError);
+        throw ApiException('Error searching poems', ApiErrorType.serverError);
       }
     } on SocketException {
-      throw ApiException('اتصال به اینترنت برقرار نیست', ApiErrorType.noConnection);
+      throw ApiException('No internet connection', ApiErrorType.noConnection);
     } on http.ClientException {
-      throw ApiException('خطا در اتصال به سرور', ApiErrorType.networkError);
+      throw ApiException('Server connection error', ApiErrorType.networkError);
     } catch (e) {
       if (e is ApiException) rethrow;
-      throw ApiException('خطای غیرمنتظره', ApiErrorType.unknown);
+      throw ApiException('Unexpected error', ApiErrorType.unknown);
     }
   }
 
   Future<Poet> getPoetById(int poetId) async {
     try {
       if (!await hasInternetConnection()) {
-        throw ApiException('اتصال به اینترنت برقرار نیست', ApiErrorType.noConnection);
+        throw ApiException('No internet connection', ApiErrorType.noConnection);
       }
 
       final response = await _client
@@ -198,17 +198,17 @@ class ApiService {
         final Map<String, dynamic> jsonData = json.decode(response.body);
         return Poet.fromJson(jsonData['poet']);
       } else if (response.statusCode == 404) {
-        throw ApiException('شاعر یافت نشد', ApiErrorType.notFound);
+        throw ApiException('Poet not found', ApiErrorType.notFound);
       } else {
-        throw ApiException('خطا در دریافت اطلاعات شاعر', ApiErrorType.serverError);
+        throw ApiException('Error fetching poet information', ApiErrorType.serverError);
       }
     } on SocketException {
-      throw ApiException('اتصال به اینترنت برقرار نیست', ApiErrorType.noConnection);
+      throw ApiException('No internet connection', ApiErrorType.noConnection);
     } on http.ClientException {
-      throw ApiException('خطا در اتصال به سرور', ApiErrorType.networkError);
+      throw ApiException('Server connection error', ApiErrorType.networkError);
     } catch (e) {
       if (e is ApiException) rethrow;
-      throw ApiException('خطای غیرمنتظره', ApiErrorType.unknown);
+      throw ApiException('Unexpected error', ApiErrorType.unknown);
     }
   }
 

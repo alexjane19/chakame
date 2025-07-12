@@ -1,4 +1,4 @@
-import 'package:chakame/l10n/app_localizations.dart';
+import 'package:chakame/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/settings_provider.dart';
@@ -289,6 +289,17 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
             subtitle: Text(AppLocalizations.of(context)!.helpSubtitle),
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () => _showHelpDialog(context),
+          ),
+          const Divider(height: 1),
+          ListTile(
+            leading: Icon(
+              Icons.privacy_tip,
+              color: theme.primaryColor,
+            ),
+            title: Text(AppLocalizations.of(context)!.privacyPolicy),
+            subtitle: Text(AppLocalizations.of(context)!.privacyPolicySubtitle),
+            trailing: const Icon(Icons.arrow_forward_ios),
+            onTap: () => Navigator.pushNamed(context, '/privacy'),
           ),
           const Divider(height: 1),
           ListTile(

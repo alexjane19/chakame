@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:share_plus/share_plus.dart';
-import '../l10n/app_localizations.dart';
+import 'package:chakame/l10n/l10n.dart';
 import '../models/poem_model.dart';
 import '../providers/favorites_provider.dart';
 import '../utils/constants.dart';
