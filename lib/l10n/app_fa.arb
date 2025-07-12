@@ -1,0 +1,569 @@
+{
+  "@@locale": "fa",
+  "appTitle": "چکامه",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "favorites": "علاقه‌مندی‌ها",
+  "@favorites": {
+    "description": "Favorites menu item"
+  },
+  "favoritesWithCount": "علاقه‌مندی‌ها ({count})",
+  "@favoritesWithCount": {
+    "description": "Favorites title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "searchInFavorites": "جستجو در علاقه‌مندی‌ها",
+  "@searchInFavorites": {
+    "description": "Search placeholder text"
+  },
+  "allPoets": "همه شاعران",
+  "@allPoets": {
+    "description": "Filter option for all poets"
+  },
+  "noFavorites": "هیچ علاقه‌مندی‌ای نیست",
+  "@noFavorites": {
+    "description": "Empty state message"
+  },
+  "noFavoritesDescription": "با کلیک بر روی دکمه قلب، اشعار مورد علاقه خود را اضافه کنید",
+  "@noFavoritesDescription": {
+    "description": "Description for empty favorites state"
+  },
+  "backToHome": "بازگشت به صفحه اصلی",
+  "@backToHome": {
+    "description": "Back to home button"
+  },
+  "noSearchResults": "نتیجه‌ای یافت نشد",
+  "@noSearchResults": {
+    "description": "No search results message"
+  },
+  "changeSearchOrFilter": "عبارت جستجو یا فیلتر شاعر را تغییر دهید",
+  "@changeSearchOrFilter": {
+    "description": "No search results description"
+  },
+  "sort": "مرتب‌سازی",
+  "@sort": {
+    "description": "Sort button"
+  },
+  "newest": "جدیدترین",
+  "@newest": {
+    "description": "Sort by newest"
+  },
+  "oldest": "قدیمی‌ترین",
+  "@oldest": {
+    "description": "Sort by oldest"
+  },
+  "poetName": "نام شاعر",
+  "@poetName": {
+    "description": "Sort by poet name"
+  },
+  "poemTitle": "عنوان شعر",
+  "@poemTitle": {
+    "description": "Sort by poem title"
+  },
+  "deleteAll": "حذف همه",
+  "@deleteAll": {
+    "description": "Delete all favorites"
+  },
+  "export": "صادر کردن",
+  "@export": {
+    "description": "Export favorites"
+  },
+  "deleteAllFavorites": "حذف همه علاقه‌مندی‌ها",
+  "@deleteAllFavorites": {
+    "description": "Delete all favorites dialog title"
+  },
+  "deleteAllConfirmation": "آیا از حذف همه علاقه‌مندی‌ها مطمئن هستید؟ این عمل غیرقابل بازگشت است.",
+  "@deleteAllConfirmation": {
+    "description": "Delete all favorites confirmation"
+  },
+  "cancel": "انصراف",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "delete": "حذف",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "favoritesExported": "علاقه‌مندی‌ها صادر شد",
+  "@favoritesExported": {
+    "description": "Favorites exported message"
+  },
+  "removeFromFavorites": "حذف از علاقه‌مندی‌ها",
+  "@removeFromFavorites": {
+    "description": "Remove from favorites dialog title"
+  },
+  "removeFromFavoritesConfirmation": "آیا از حذف \"{title}\" مطمئن هستید؟",
+  "@removeFromFavoritesConfirmation": {
+    "description": "Remove from favorites confirmation",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "poemText": "متن شعر",
+  "@poemText": {
+    "description": "Poem text section title"
+  },
+  "operations": "عملیات",
+  "@operations": {
+    "description": "Operations section title"
+  },
+  "copyText": "کپی متن",
+  "@copyText": {
+    "description": "Copy text button"
+  },
+  "share": "اشتراک‌گذاری",
+  "@share": {
+    "description": "Share button"
+  },
+  "addToFavorites": "افزودن به علاقه‌مندی‌ها",
+  "@addToFavorites": {
+    "description": "Add to favorites button"
+  },
+  "removeFromFavoritesShort": "حذف از علاقه‌مندی‌ها",
+  "@removeFromFavoritesShort": {
+    "description": "Remove from favorites button"
+  },
+  "poemInfo": "اطلاعات شعر",
+  "@poemInfo": {
+    "description": "Poem information section title"
+  },
+  "title": "عنوان:",
+  "@title": {
+    "description": "Title label"
+  },
+  "poet": "شاعر:",
+  "@poet": {
+    "description": "Poet label"
+  },
+  "category": "دسته‌بندی:",
+  "@category": {
+    "description": "Category label"
+  },
+  "verseCount": "تعداد ابیات:",
+  "@verseCount": {
+    "description": "Verse count label"
+  },
+  "versesText": "{count} بیت",
+  "@versesText": {
+    "description": "Verses count text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "viewInGanjoor": "مشاهده در گنجور",
+  "@viewInGanjoor": {
+    "description": "View in Ganjoor button"
+  },
+  "poemCopied": "شعر کپی شد",
+  "@poemCopied": {
+    "description": "Poem copied message"
+  },
+  "poemAddedToFavorites": "شعر به علاقه‌مندی‌ها اضافه شد",
+  "@poemAddedToFavorites": {
+    "description": "Poem added to favorites message"
+  },
+  "poemRemovedFromFavorites": "شعر از علاقه‌مندی‌ها حذف شد",
+  "@poemRemovedFromFavorites": {
+    "description": "Poem removed from favorites message"
+  },
+  "ganjoorSource": "منبع: گنجور",
+  "@ganjoorSource": {
+    "description": "Ganjoor source text"
+  },
+  "link": "لینک: {url}",
+  "@link": {
+    "description": "Link text with URL",
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "copy": "کپی",
+  "@copy": {
+    "description": "Copy button"
+  },
+  "newPoem": "شعر جدید",
+  "@newPoem": {
+    "description": "New poem button text"
+  },
+  "getRandomPoem": "دریافت شعر تصادفی",
+  "@getRandomPoem": {
+    "description": "Get random poem button description"
+  },
+  "loading": "در حال دریافت...",
+  "@loading": {
+    "description": "Loading text"
+  },
+  "retry": "تلاش مجدد",
+  "@retry": {
+    "description": "Retry button"
+  },
+  "poemLoadError": "خطا در دریافت شعر",
+  "@poemLoadError": {
+    "description": "Error loading poem message"
+  },
+  "continuePoem": "... ادامه شعر",
+  "@continuePoem": {
+    "description": "Continue poem text"
+  },
+  "copyShort": "کپی",
+  "@copyShort": {
+    "description": "Short copy button text"
+  },
+  "todaysPoet": "شاعر امروز",
+  "@todaysPoet": {
+    "description": "Today's poet section title"
+  },
+  "explorePoems": "کاوش اشعار",
+  "@explorePoems": {
+    "description": "Explore poems section title"
+  },
+  "searchPoems": "جستجوی اشعار",
+  "@searchPoems": {
+    "description": "Search poems title"
+  },
+  "poets": "شاعران",
+  "@poets": {
+    "description": "Poets menu item"
+  },
+  "settings": "تنظیمات",
+  "@settings": {
+    "description": "Settings menu item"
+  },
+  "recentPoems": "اشعار اخیر",
+  "@recentPoems": {
+    "description": "Recent poems section title"
+  },
+  "home": "خانه",
+  "@home": {
+    "description": "Home menu item"
+  },
+  "welcome": "خوش آمدید",
+  "@welcome": {
+    "description": "Welcome title"
+  },
+  "welcomeMessage": "به دنیای زیبای شعر فارسی خوش آمدید",
+  "@welcomeMessage": {
+    "description": "Welcome message text"
+  },
+  "notifications": "اعلان‌ها",
+  "@notifications": {
+    "description": "Notifications settings section"
+  },
+  "about": "درباره",
+  "@about": {
+    "description": "About settings section"
+  },
+  "darkMode": "حالت تاریک",
+  "@darkMode": {
+    "description": "Dark mode setting"
+  },
+  "fontSelection": "انتخاب فونت",
+  "@fontSelection": {
+    "description": "Font selection setting"
+  },
+  "notificationTime": "زمان اعلان",
+  "@notificationTime": {
+    "description": "Notification time setting"
+  },
+  "testNotification": "تست اعلان",
+  "@testNotification": {
+    "description": "Test notification button"
+  },
+  "ok": "تأیید",
+  "@ok": {
+    "description": "OK button"
+  },
+  "all": "همه",
+  "@all": {
+    "description": "All filter option"
+  },
+  "noFavoritesAdded": "هنوز شعری به علاقه‌مندی‌ها اضافه نشده",
+  "@noFavoritesAdded": {
+    "description": "No favorites added message"
+  },
+  "searchPoemsTitle": "جستجوی اشعار",
+  "@searchPoemsTitle": {
+    "description": "Search poems dialog title"
+  },
+  "randomPoemFromPoet": "شعر تصادفی از این شاعر",
+  "@randomPoemFromPoet": {
+    "description": "Random poem from poet button"
+  },
+  "gettingPoemFromPoet": "در حال دریافت شعر از {poetName}...",
+  "@gettingPoemFromPoet": {
+    "description": "Getting poem from poet message",
+    "placeholders": {
+      "poetName": {
+        "type": "String"
+      }
+    }
+  },
+  "dailyNotifications": "اعلان‌های روزانه",
+  "@dailyNotifications": {
+    "description": "Daily notifications setting"
+  },
+  "sendTestNotification": "ارسال اعلان آزمایشی",
+  "@sendTestNotification": {
+    "description": "Send test notification subtitle"
+  },
+  "favoritesTitle": "علاقه‌مندی‌ها",
+  "@favoritesTitle": {
+    "description": "Favorites section title"
+  },
+  "poemsCount": "{count} شعر",
+  "@poemsCount": {
+    "description": "Poems count text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "clearCache": "پاک کردن حافظه موقت",
+  "@clearCache": {
+    "description": "Clear cache setting"
+  },
+  "clearCacheSubtitle": "حذف اشعار کش شده",
+  "@clearCacheSubtitle": {
+    "description": "Clear cache subtitle"
+  },
+  "backup": "پشتیبان‌گیری",
+  "@backup": {
+    "description": "Backup setting"
+  },
+  "backupSubtitle": "صادر کردن تنظیمات و علاقه‌مندی‌ها",
+  "@backupSubtitle": {
+    "description": "Backup subtitle"
+  },
+  "aboutApp": "درباره {appName}",
+  "@aboutApp": {
+    "description": "About app title",
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      }
+    }
+  },
+  "appVersion": "نسخه {version}",
+  "@appVersion": {
+    "description": "App version text",
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "version": "نسخه {version}",
+  "@version": {
+    "description": "Version text",
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "help": "راهنما",
+  "@help": {
+    "description": "Help section"
+  },
+  "helpSubtitle": "نحوه استفاده از برنامه",
+  "@helpSubtitle": {
+    "description": "Help subtitle"
+  },
+  "dataSource": "منبع داده‌ها",
+  "@dataSource": {
+    "description": "Data source section"
+  },
+  "ganjoorSource": "گنجور",
+  "@ganjoorSource": {
+    "description": "Ganjoor data source"
+  },
+  "testNotificationSent": "اعلان آزمایشی ارسال شد",
+  "@testNotificationSent": {
+    "description": "Test notification sent message"
+  },
+  "storageStats": "آمار ذخیره‌سازی",
+  "@storageStats": {
+    "description": "Storage statistics title"
+  },
+  "cachedPoems": "اشعار کش شده: {count}",
+  "@cachedPoems": {
+    "description": "Cached poems count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "favoritesCount": "علاقه‌مندی‌ها: {count}",
+  "@favoritesCount": {
+    "description": "Favorites count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "cachedPoets": "شاعران کش شده: {count}",
+  "@cachedPoets": {
+    "description": "Cached poets count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsCount": "تنظیمات: {count}",
+  "@settingsCount": {
+    "description": "Settings count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "clearCacheTitle": "پاک کردن حافظه موقت",
+  "@clearCacheTitle": {
+    "description": "Clear cache dialog title"
+  },
+  "clearCacheConfirmation": "آیا از پاک کردن حافظه موقت مطمئن هستید؟",
+  "@clearCacheConfirmation": {
+    "description": "Clear cache confirmation message"
+  },
+  "cacheCleared": "حافظه موقت پاک شد",
+  "@cacheCleared": {
+    "description": "Cache cleared message"
+  },
+  "clear": "پاک کردن",
+  "@clear": {
+    "description": "Clear button"
+  },
+  "dataExported": "داده‌ها صادر شد",
+  "@dataExported": {
+    "description": "Data exported message"
+  },
+  "appDescription": "برنامه‌ای برای مطالعه شعر فارسی با اشعار از گنجور",
+  "@appDescription": {
+    "description": "App description"
+  },
+  "features": "امکانات:",
+  "@features": {
+    "description": "Features title"
+  },
+  "randomPoemFeature": "• دریافت شعر تصادفی",
+  "@randomPoemFeature": {
+    "description": "Random poem feature"
+  },
+  "favoritesFeature": "• علاقه‌مندی‌ها",
+  "@favoritesFeature": {
+    "description": "Favorites feature"
+  },
+  "notificationsFeature": "• اعلان‌های روزانه",
+  "@notificationsFeature": {
+    "description": "Notifications feature"
+  },
+  "searchFeature": "• جستجو و فیلتر",
+  "@searchFeature": {
+    "description": "Search and filter feature"
+  },
+  "helpTitle": "راهنما",
+  "@helpTitle": {
+    "description": "Help dialog title"
+  },
+  "howToUse": "نحوه استفاده از {appName}:",
+  "@howToUse": {
+    "description": "How to use app text",
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      }
+    }
+  },
+  "helpStep1": "1. برای دریافت شعر تصادفی، روی دکمه بزرگ کلیک کنید",
+  "@helpStep1": {
+    "description": "Help step 1"
+  },
+  "helpStep2": "2. با کلیک روی قلب، شعر را به علاقه‌مندی‌ها اضافه کنید",
+  "@helpStep2": {
+    "description": "Help step 2"
+  },
+  "helpStep3": "3. در صفحه علاقه‌مندی‌ها می‌توانید اشعار را جستجو کنید",
+  "@helpStep3": {
+    "description": "Help step 3"
+  },
+  "helpStep4": "4. از تنظیمات، اعلان‌های روزانه را فعال کنید",
+  "@helpStep4": {
+    "description": "Help step 4"
+  },
+  "helpStep5": "5. شعرها را با دوستان خود به اشتراک بگذارید",
+  "@helpStep5": {
+    "description": "Help step 5"
+  },
+  "dataSourceTitle": "منبع داده‌ها",
+  "@dataSourceTitle": {
+    "description": "Data source dialog title"
+  },
+  "ganjoorDescription": "این برنامه از API گنجور استفاده می‌کند.",
+  "@ganjoorDescription": {
+    "description": "Ganjoor API description"
+  },
+  "ganjoorInfo": "گنجور بزرگترین کتابخانه شعر فارسی است که توسط رضا امیرحسنی تأسیس شده است.",
+  "@ganjoorInfo": {
+    "description": "Ganjoor information"
+  },
+  "ganjoorWebsite": "وب‌سایت: ganjoor.net",
+  "@ganjoorWebsite": {
+    "description": "Ganjoor website"
+  },
+  "ganjoorApi": "API: api.ganjoor.net",
+  "@ganjoorApi": {
+    "description": "Ganjoor API"
+  },
+  "recentFavorites": "علاقه‌مندی‌های اخیر",
+  "@recentFavorites": {
+    "description": "Recent favorites title"
+  },
+  "dailyPoemNotificationTitle": "شکامه - شعر روز",
+  "@dailyPoemNotificationTitle": {
+    "description": "Daily poem notification title"
+  },
+  "dailyPoemNotificationBody": "شعری زیبا برای شما آماده شده است",
+  "@dailyPoemNotificationBody": {
+    "description": "Daily poem notification body"
+  },
+  "testNotificationTitle": "تست اعلان",
+  "@testNotificationTitle": {
+    "description": "Test notification title"
+  },
+  "testNotificationBody": "این یک پیام آزمایشی است",
+  "@testNotificationBody": {
+    "description": "Test notification body"
+  },
+  "enabled": "فعال",
+  "@enabled": {
+    "description": "Enabled status"
+  },
+  "disabled": "غیرفعال",
+  "@disabled": {
+    "description": "Disabled status"
+  },
+  "viewAll": "مشاهده همه",
+  "@viewAll": {
+    "description": "View all button text"
+  },
+  "searchHint": "جستجو کنید...",
+  "@searchHint": {
+    "description": "Search field hint text"
+  }
+}

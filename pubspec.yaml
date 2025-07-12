@@ -1,0 +1,94 @@
+name: chakame
+description: A beautiful Flutter app for Iranian Poetry Daily with random poems from famous Persian poets
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # HTTP requests
+  http: ^1.4.0
+  
+  # Local notifications (mobile only)
+  flutter_local_notifications: ^19.3.0
+  
+  # Local storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  
+  # State management
+  flutter_riverpod: ^2.6.1
+  
+  # Sharing functionality
+  share_plus: ^11.0.0
+  
+  # Path provider for local files
+  path_provider: ^2.0.15
+  
+  # Connectivity checking
+  connectivity_plus: ^6.1.4
+  
+  # Animations
+  animations: ^2.0.7
+  
+  # Persian calendar and date formatting
+  shamsi_date: ^1.0.0
+  
+  # JSON annotation
+  json_annotation: ^4.8.1
+  
+  # Cached network images
+  cached_network_image: ^3.2.3
+  
+  # Intl for localization
+  intl: ^0.20.2
+  
+  # Material Icons
+  cupertino_icons: ^1.0.2
+  
+  # Cross-platform support
+  universal_html: ^2.2.4
+  universal_io: ^2.2.2
+  
+  # Desktop/Web specific
+  url_launcher: ^6.2.2
+  file_picker: ^10.2.0
+  
+  # Window management for desktop
+  window_manager: ^0.5.0
+  
+  # Additional cross-platform packages
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.4.6
+  json_serializable: ^6.7.1
+  hive_generator: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+  
+  assets:
+    - assets/images/
+    - assets/fonts/
+    
+  fonts:
+    - family: IRANSans
+      fonts:
+        - asset: assets/fonts/IRANSansLight.ttf
+          weight: 300
+        - asset: assets/fonts/IRANSans.ttf
+          weight: 400
+        - asset: assets/fonts/IRANSansMedium.ttf
+          weight: 500
+        - asset: assets/fonts/IRANSansBold.ttf
+          weight: 700

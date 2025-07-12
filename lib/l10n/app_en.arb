@@ -1,0 +1,569 @@
+{
+  "@@locale": "en",
+  "appTitle": "Chakame",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "favorites": "Favorites",
+  "@favorites": {
+    "description": "Favorites menu item"
+  },
+  "favoritesWithCount": "Favorites ({count})",
+  "@favoritesWithCount": {
+    "description": "Favorites title with count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "searchInFavorites": "Search in favorites",
+  "@searchInFavorites": {
+    "description": "Search placeholder text"
+  },
+  "allPoets": "All Poets",
+  "@allPoets": {
+    "description": "Filter option for all poets"
+  },
+  "noFavorites": "No Favorites",
+  "@noFavorites": {
+    "description": "Empty state message"
+  },
+  "noFavoritesDescription": "Add your favorite poems by clicking the heart button",
+  "@noFavoritesDescription": {
+    "description": "Description for empty favorites state"
+  },
+  "backToHome": "Back to Home",
+  "@backToHome": {
+    "description": "Back to home button"
+  },
+  "noSearchResults": "No Results Found",
+  "@noSearchResults": {
+    "description": "No search results message"
+  },
+  "changeSearchOrFilter": "Change your search term or poet filter",
+  "@changeSearchOrFilter": {
+    "description": "No search results description"
+  },
+  "sort": "Sort",
+  "@sort": {
+    "description": "Sort button"
+  },
+  "newest": "Newest",
+  "@newest": {
+    "description": "Sort by newest"
+  },
+  "oldest": "Oldest",
+  "@oldest": {
+    "description": "Sort by oldest"
+  },
+  "poetName": "Poet Name",
+  "@poetName": {
+    "description": "Sort by poet name"
+  },
+  "poemTitle": "Poem Title",
+  "@poemTitle": {
+    "description": "Sort by poem title"
+  },
+  "deleteAll": "Delete All",
+  "@deleteAll": {
+    "description": "Delete all favorites"
+  },
+  "export": "Export",
+  "@export": {
+    "description": "Export favorites"
+  },
+  "deleteAllFavorites": "Delete All Favorites",
+  "@deleteAllFavorites": {
+    "description": "Delete all favorites dialog title"
+  },
+  "deleteAllConfirmation": "Are you sure you want to delete all favorites? This action cannot be undone.",
+  "@deleteAllConfirmation": {
+    "description": "Delete all favorites confirmation"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "delete": "Delete",
+  "@delete": {
+    "description": "Delete button"
+  },
+  "favoritesExported": "Favorites exported",
+  "@favoritesExported": {
+    "description": "Favorites exported message"
+  },
+  "removeFromFavorites": "Remove from Favorites",
+  "@removeFromFavorites": {
+    "description": "Remove from favorites dialog title"
+  },
+  "removeFromFavoritesConfirmation": "Are you sure you want to remove \"{title}\" from favorites?",
+  "@removeFromFavoritesConfirmation": {
+    "description": "Remove from favorites confirmation",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "poemText": "Poem Text",
+  "@poemText": {
+    "description": "Poem text section title"
+  },
+  "operations": "Operations",
+  "@operations": {
+    "description": "Operations section title"
+  },
+  "copyText": "Copy Text",
+  "@copyText": {
+    "description": "Copy text button"
+  },
+  "share": "Share",
+  "@share": {
+    "description": "Share button"
+  },
+  "addToFavorites": "Add to Favorites",
+  "@addToFavorites": {
+    "description": "Add to favorites button"
+  },
+  "removeFromFavoritesShort": "Remove from Favorites",
+  "@removeFromFavoritesShort": {
+    "description": "Remove from favorites button"
+  },
+  "poemInfo": "Poem Information",
+  "@poemInfo": {
+    "description": "Poem information section title"
+  },
+  "title": "Title:",
+  "@title": {
+    "description": "Title label"
+  },
+  "poet": "Poet:",
+  "@poet": {
+    "description": "Poet label"
+  },
+  "category": "Category:",
+  "@category": {
+    "description": "Category label"
+  },
+  "verseCount": "Verse Count:",
+  "@verseCount": {
+    "description": "Verse count label"
+  },
+  "versesText": "{count} verses",
+  "@versesText": {
+    "description": "Verses count text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "viewInGanjoor": "View in Ganjoor",
+  "@viewInGanjoor": {
+    "description": "View in Ganjoor button"
+  },
+  "poemCopied": "Poem copied to clipboard",
+  "@poemCopied": {
+    "description": "Poem copied message"
+  },
+  "poemAddedToFavorites": "Poem added to favorites",
+  "@poemAddedToFavorites": {
+    "description": "Poem added to favorites message"
+  },
+  "poemRemovedFromFavorites": "Poem removed from favorites",
+  "@poemRemovedFromFavorites": {
+    "description": "Poem removed from favorites message"
+  },
+  "ganjoorSource": "Source: Ganjoor",
+  "@ganjoorSource": {
+    "description": "Ganjoor source text"
+  },
+  "link": "Link: {url}",
+  "@link": {
+    "description": "Link text with URL",
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "copy": "Copy",
+  "@copy": {
+    "description": "Copy button"
+  },
+  "newPoem": "New Poem",
+  "@newPoem": {
+    "description": "New poem button text"
+  },
+  "getRandomPoem": "Get Random Poem",
+  "@getRandomPoem": {
+    "description": "Get random poem button description"
+  },
+  "loading": "Loading...",
+  "@loading": {
+    "description": "Loading text"
+  },
+  "retry": "Retry",
+  "@retry": {
+    "description": "Retry button"
+  },
+  "poemLoadError": "Error loading poem",
+  "@poemLoadError": {
+    "description": "Error loading poem message"
+  },
+  "continuePoem": "... continue poem",
+  "@continuePoem": {
+    "description": "Continue poem text"
+  },
+  "copyShort": "Copy",
+  "@copyShort": {
+    "description": "Short copy button text"
+  },
+  "todaysPoet": "Today's Poet",
+  "@todaysPoet": {
+    "description": "Today's poet section title"
+  },
+  "explorePoems": "Explore Poems",
+  "@explorePoems": {
+    "description": "Explore poems section title"
+  },
+  "searchPoems": "Search Poems",
+  "@searchPoems": {
+    "description": "Search poems title"
+  },
+  "poets": "Poets",
+  "@poets": {
+    "description": "Poets menu item"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings menu item"
+  },
+  "recentPoems": "Recent Poems",
+  "@recentPoems": {
+    "description": "Recent poems section title"
+  },
+  "home": "Home",
+  "@home": {
+    "description": "Home menu item"
+  },
+  "welcome": "Welcome",
+  "@welcome": {
+    "description": "Welcome title"
+  },
+  "welcomeMessage": "Welcome to the beautiful world of Persian poetry",
+  "@welcomeMessage": {
+    "description": "Welcome message text"
+  },
+  "notifications": "Notifications",
+  "@notifications": {
+    "description": "Notifications settings section"
+  },
+  "about": "About",
+  "@about": {
+    "description": "About settings section"
+  },
+  "darkMode": "Dark Mode",
+  "@darkMode": {
+    "description": "Dark mode setting"
+  },
+  "fontSelection": "Font Selection",
+  "@fontSelection": {
+    "description": "Font selection setting"
+  },
+  "notificationTime": "Notification Time",
+  "@notificationTime": {
+    "description": "Notification time setting"
+  },
+  "testNotification": "Test Notification",
+  "@testNotification": {
+    "description": "Test notification button"
+  },
+  "ok": "OK",
+  "@ok": {
+    "description": "OK button"
+  },
+  "all": "All",
+  "@all": {
+    "description": "All filter option"
+  },
+  "noFavoritesAdded": "No poems have been added to favorites yet",
+  "@noFavoritesAdded": {
+    "description": "No favorites added message"
+  },
+  "searchPoemsTitle": "Search Poems",
+  "@searchPoemsTitle": {
+    "description": "Search poems dialog title"
+  },
+  "randomPoemFromPoet": "Random poem from this poet",
+  "@randomPoemFromPoet": {
+    "description": "Random poem from poet button"
+  },
+  "gettingPoemFromPoet": "Getting poem from {poetName}...",
+  "@gettingPoemFromPoet": {
+    "description": "Getting poem from poet message",
+    "placeholders": {
+      "poetName": {
+        "type": "String"
+      }
+    }
+  },
+  "dailyNotifications": "Daily Notifications",
+  "@dailyNotifications": {
+    "description": "Daily notifications setting"
+  },
+  "sendTestNotification": "Send test notification",
+  "@sendTestNotification": {
+    "description": "Send test notification subtitle"
+  },
+  "favoritesTitle": "Favorites",
+  "@favoritesTitle": {
+    "description": "Favorites section title"
+  },
+  "poemsCount": "{count} poems",
+  "@poemsCount": {
+    "description": "Poems count text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "clearCache": "Clear Cache",
+  "@clearCache": {
+    "description": "Clear cache setting"
+  },
+  "clearCacheSubtitle": "Delete cached poems",
+  "@clearCacheSubtitle": {
+    "description": "Clear cache subtitle"
+  },
+  "backup": "Backup",
+  "@backup": {
+    "description": "Backup setting"
+  },
+  "backupSubtitle": "Export settings and favorites",
+  "@backupSubtitle": {
+    "description": "Backup subtitle"
+  },
+  "aboutApp": "About {appName}",
+  "@aboutApp": {
+    "description": "About app title",
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      }
+    }
+  },
+  "appVersion": "Version {version}",
+  "@appVersion": {
+    "description": "App version text",
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "version": "Version {version}",
+  "@version": {
+    "description": "Version text",
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "help": "Help",
+  "@help": {
+    "description": "Help section"
+  },
+  "helpSubtitle": "How to use the app",
+  "@helpSubtitle": {
+    "description": "Help subtitle"
+  },
+  "dataSource": "Data Source",
+  "@dataSource": {
+    "description": "Data source section"
+  },
+  "ganjoorSource": "Ganjoor",
+  "@ganjoorSource": {
+    "description": "Ganjoor data source"
+  },
+  "testNotificationSent": "Test notification sent",
+  "@testNotificationSent": {
+    "description": "Test notification sent message"
+  },
+  "storageStats": "Storage Statistics",
+  "@storageStats": {
+    "description": "Storage statistics title"
+  },
+  "cachedPoems": "Cached poems: {count}",
+  "@cachedPoems": {
+    "description": "Cached poems count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "favoritesCount": "Favorites: {count}",
+  "@favoritesCount": {
+    "description": "Favorites count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "cachedPoets": "Cached poets: {count}",
+  "@cachedPoets": {
+    "description": "Cached poets count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsCount": "Settings: {count}",
+  "@settingsCount": {
+    "description": "Settings count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "clearCacheTitle": "Clear Cache",
+  "@clearCacheTitle": {
+    "description": "Clear cache dialog title"
+  },
+  "clearCacheConfirmation": "Are you sure you want to clear the cache?",
+  "@clearCacheConfirmation": {
+    "description": "Clear cache confirmation message"
+  },
+  "cacheCleared": "Cache cleared",
+  "@cacheCleared": {
+    "description": "Cache cleared message"
+  },
+  "clear": "Clear",
+  "@clear": {
+    "description": "Clear button"
+  },
+  "dataExported": "Data exported",
+  "@dataExported": {
+    "description": "Data exported message"
+  },
+  "appDescription": "An app for reading Persian poetry with poems from Ganjoor",
+  "@appDescription": {
+    "description": "App description"
+  },
+  "features": "Features:",
+  "@features": {
+    "description": "Features title"
+  },
+  "randomPoemFeature": "• Get random poems",
+  "@randomPoemFeature": {
+    "description": "Random poem feature"
+  },
+  "favoritesFeature": "• Favorites",
+  "@favoritesFeature": {
+    "description": "Favorites feature"
+  },
+  "notificationsFeature": "• Daily notifications",
+  "@notificationsFeature": {
+    "description": "Notifications feature"
+  },
+  "searchFeature": "• Search and filter",
+  "@searchFeature": {
+    "description": "Search and filter feature"
+  },
+  "helpTitle": "Help",
+  "@helpTitle": {
+    "description": "Help dialog title"
+  },
+  "howToUse": "How to use {appName}:",
+  "@howToUse": {
+    "description": "How to use app text",
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      }
+    }
+  },
+  "helpStep1": "1. Click the big button to get a random poem",
+  "@helpStep1": {
+    "description": "Help step 1"
+  },
+  "helpStep2": "2. Click the heart to add the poem to favorites",
+  "@helpStep2": {
+    "description": "Help step 2"
+  },
+  "helpStep3": "3. In the favorites page, you can search for poems",
+  "@helpStep3": {
+    "description": "Help step 3"
+  },
+  "helpStep4": "4. Enable daily notifications from settings",
+  "@helpStep4": {
+    "description": "Help step 4"
+  },
+  "helpStep5": "5. Share poems with your friends",
+  "@helpStep5": {
+    "description": "Help step 5"
+  },
+  "dataSourceTitle": "Data Source",
+  "@dataSourceTitle": {
+    "description": "Data source dialog title"
+  },
+  "ganjoorDescription": "This app uses the Ganjoor API.",
+  "@ganjoorDescription": {
+    "description": "Ganjoor API description"
+  },
+  "ganjoorInfo": "Ganjoor is the largest Persian poetry library founded by Reza Amirhesni.",
+  "@ganjoorInfo": {
+    "description": "Ganjoor information"
+  },
+  "ganjoorWebsite": "Website: ganjoor.net",
+  "@ganjoorWebsite": {
+    "description": "Ganjoor website"
+  },
+  "ganjoorApi": "API: api.ganjoor.net",
+  "@ganjoorApi": {
+    "description": "Ganjoor API"
+  },
+  "recentFavorites": "Recent Favorites",
+  "@recentFavorites": {
+    "description": "Recent favorites title"
+  },
+  "dailyPoemNotificationTitle": "Chakame - Daily Poem",
+  "@dailyPoemNotificationTitle": {
+    "description": "Daily poem notification title"
+  },
+  "dailyPoemNotificationBody": "A beautiful poem is ready for you",
+  "@dailyPoemNotificationBody": {
+    "description": "Daily poem notification body"
+  },
+  "testNotificationTitle": "Test Notification",
+  "@testNotificationTitle": {
+    "description": "Test notification title"
+  },
+  "testNotificationBody": "This is a test message",
+  "@testNotificationBody": {
+    "description": "Test notification body"
+  },
+  "enabled": "Enabled",
+  "@enabled": {
+    "description": "Enabled status"
+  },
+  "disabled": "Disabled",
+  "@disabled": {
+    "description": "Disabled status"
+  },
+  "viewAll": "View All",
+  "@viewAll": {
+    "description": "View all button text"
+  },
+  "searchHint": "Search...",
+  "@searchHint": {
+    "description": "Search field hint text"
+  }
+}
