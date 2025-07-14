@@ -41,7 +41,7 @@ jobs:
       run: flutter packages pub run build_runner build --delete-conflicting-outputs
       
     - name: Build web
-      run: flutter build web --release --web-renderer html --base-href /Chakame/
+      run: flutter build web --release --base-href /Chakame/
       
     - name: Copy privacy policy to build
       run: |
