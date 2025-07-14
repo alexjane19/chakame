@@ -41,7 +41,7 @@ jobs:
       run: flutter packages pub run build_runner build --delete-conflicting-outputs
       
     - name: Build web
-      run: flutter build web --release --base-href /Chakame/
+      run: flutter build web --release --base-href /chakame/
       
     - name: Copy privacy policy to build
       run: |
@@ -54,7 +54,7 @@ jobs:
         # Copy Jekyll config for GitHub Pages
         cp web/_config.yml build/web/ 2>/dev/null || true
         # Create a 404.html that redirects to index.html for SPA routing
-        echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/Chakame/"></head><body></body></html>' > build/web/404.html
+        echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/chakame/"></head><body></body></html>' > build/web/404.html
       
     - name: Setup Pages
       uses: actions/configure-pages@v4
